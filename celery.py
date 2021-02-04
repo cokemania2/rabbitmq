@@ -15,7 +15,6 @@ moon_routing_key = 'moon'
 
 app = Celery('test_celery',
              broker='amqp://coke:coke123@localhost/coke_host',
-             backend='rpc://',
              routing_key=default_routing_key,
              include=['test_celery.tasks'])
 

@@ -10,3 +10,11 @@ def longtime_add(x, y):
     time.sleep(5)
     print ('long time task finished')
     return x + y
+    
+@app.task
+def longtime_mul(x, y) :
+    print ('long time task begins')
+    # sleep 5 seconds
+    time.sleep(5)
+    print ('long time task finished')
+    return x * y

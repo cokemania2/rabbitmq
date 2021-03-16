@@ -15,7 +15,7 @@ moon_queue_name = 'moon'
 moon_routing_key = 'moon'
 
 app = Celery('rabbitmq',
-             broker='amqp://coke:coke123@localhost/coke_host',
+             broker='amqp://test2:test2@localhost/',
              routing_key=default_routing_key,
              include=['tasks2'])
 
@@ -56,3 +56,11 @@ def longtime_mul(x, y) :
     time.sleep(5)
     print ('long time task finished')
     return x * y
+
+@app.task
+def longtime_ok(x, y) :
+    print ('long time OK begins')
+    # sleep 5 seconds
+    time.sleep(5)
+    print ('long time OK finished')
+    return x + y

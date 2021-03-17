@@ -15,7 +15,7 @@ moon_queue_name = 'moon'
 moon_routing_key = 'moon'
 
 app = Celery('rabbitmq',
-             broker='amqp://test2:test2@localhost/',
+             broker='amqp://test:test@localhost/',
              routing_key=default_routing_key,
              include=['tasks2'])
 

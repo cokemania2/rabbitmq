@@ -1,7 +1,7 @@
 install
 ```
 sudo apt-get install -y rabbitmq-server
-sudo pip install celery
+sudo pip install celery==4.1.1
 sudo service rabbitmq-server status
 ```
 Add a new/fresh user, say user test and password test

@@ -3,10 +3,10 @@ from kombu import Exchange, Queue
 from celery import Celery
 import time
 
-default_exchange_name = 'default'
+default_exchange_name = 'celery'
 
-default_queue_name = 'default'
-default_routing_key = 'default'
+default_queue_name = 'celery'
+default_routing_key = 'celery'
 
 sunshine_queue_name = 'sunshine'
 sunshine_routing_key = 'sunshine'
